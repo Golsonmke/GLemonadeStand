@@ -13,11 +13,26 @@ namespace LemonadeStand_3DayStarter
 
         public Game()
         {
-            
+            weather = new Weather();
 
+        }
+        public void DisplayWeather()
+        {
+            int counter = 0;
+            do
+            {
+                weather.WeatherType();
+                weather.RnadomTemperature();
+                Console.WriteLine();
+
+                counter++;
+
+            }
+            while (counter < 8);
         }
         public void RunGame()
         {
+            DisplayWeather();
            
         }
     }

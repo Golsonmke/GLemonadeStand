@@ -10,12 +10,13 @@ namespace LemonadeStand_3DayStarter
     {
         int temperature;
         string forcast;
-        string cloudy;
+        
         
 
         public Weather()
         {
-           
+            temperature = 55;
+            temperature = 100;
 
 
            
@@ -32,9 +33,10 @@ namespace LemonadeStand_3DayStarter
             Console.WriteLine("Forcast " + forcast[rnd.Next(0, forcast.Count)]);
 
         }
-        public void Temperature()
+        public void RnadomTemperature()
         {
-            Random random = new Random();
+            Random temperature = new Random();
+            Console.WriteLine(temperature.Next(55, 100));
 
         }
 
