@@ -9,16 +9,28 @@ namespace LemonadeStand_3DayStarter
     class Player
     {
         // member variables (HAS A)
+        public string name;
         public Inventory inventory;
         public Wallet wallet;
+        public Recipe recipe;
+        public Pitcher pitcher;
+        public Customer customer;
 
         // constructor (SPAWNER)
         public Player()
         {
+            this.name = "Name";
             inventory = new Inventory();
             wallet = new Wallet();
+            recipe = new Recipe();
+            pitcher = new Pitcher();
+            customer = new Customer();
+        }
+        public void PurchaseInventory()
+        {
+
         }
 
-        // member methods (CAN DO)
-    }  // get money from sales
+             // member methods (CAN DO) purschase items, sell lemonade
+    }  
 }

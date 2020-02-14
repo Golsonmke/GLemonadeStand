@@ -8,31 +8,30 @@ namespace LemonadeStand_3DayStarter
 {
     class Game
     {
-        Weather weather;
-        Inventory Inventory;
+
+        
 
         public Game()
         {
-            weather = new Weather();
-
+            
         }
-        public void DisplayWeather()
+        public void HowLongWouldLikeToPlay()
         {
-            int counter = 0;
-            do
-            {
-                weather.WeatherType();
-                weather.RnadomTemperature();
-                Console.WriteLine();
 
-                counter++;
-
-            }
-            while (counter < 8);
         }
+        public void PurchaseInventory()
+        {
+
+        }
+        public void QualityControl()
+        {
+
+        }
+
+       
         public void RunGame()
         {
-            DisplayWeather();
+            
            
         }
     }

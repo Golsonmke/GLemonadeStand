@@ -10,6 +10,7 @@ namespace LemonadeStand_3DayStarter
     {
 
         int time;
+        string weekDay;
 
         public Day()
         {
@@ -17,6 +18,19 @@ namespace LemonadeStand_3DayStarter
         }
         public void TimeOfDay()
         {
+
+        }
+        public void DayOfTheWeek()
+        {
+            List<string> weekDay = new List<string>();
+            weekDay.Add("Monday");
+            weekDay.Add("Tuesday");
+            weekDay.Add("Wendesday");
+            weekDay.Add("Thursday");
+            weekDay.Add("friday");
+            weekDay.Add("saturday");
+            weekDay.Add("Sunday");
+
 
         }
     }

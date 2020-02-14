@@ -39,7 +39,20 @@ namespace LemonadeStand_3DayStarter
             Console.WriteLine(temperature.Next(55, 100));
 
         }
+        public void DisplayWeather()
+        {
+            int counter = 0;
+            do
+            {
+                weather.WeatherType();
+                weather.RnadomTemperature();
+                Console.WriteLine();
 
+                counter++;
+
+            }
+            while (counter < 7);
+        }
 
     }
 }
