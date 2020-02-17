@@ -40,18 +40,10 @@ namespace LemonadeStand_3DayStarter
 
         }
         public void DisplayWeather()
-        {
-            int counter = 0;
-            do
-            {
+        {   
                 WeatherType();
                 RandomTemperature();
                 Console.WriteLine();
-
-                counter++;
-
-            }
-            while (counter < 7);
         }
 
     }

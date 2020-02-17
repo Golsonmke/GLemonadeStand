@@ -20,16 +20,12 @@ namespace LemonadeStand_3DayStarter
         public Player()
         {
             this.name = "Name";
-          
             wallet = new Wallet();
-            
-            pitcher = new Pitcher();
+            inventory = new Inventory();
             customer = new Customer();
+            recipe = new Recipe();
         }
-        public void PurchaseInventory()
-        {
-           
-        }
+        
 
              // member methods (CAN DO) purschase items, sell lemonade
     }  

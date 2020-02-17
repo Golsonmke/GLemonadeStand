@@ -20,7 +20,7 @@ namespace LemonadeStand_3DayStarter
         {
 
         }
-
+        public UpdateRecipe
         // member methods (CAN DO)
         // MOVE THESE TO INV
        

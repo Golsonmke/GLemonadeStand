@@ -13,10 +13,20 @@ namespace LemonadeStand_3DayStarter
         private double pricePerSugarCube;
         private double pricePerIceCube;
         private double pricePerCup;
+        public List<Lemon> lemons;
+        public List<SugarCube> sugarCubes;
+        public List<IceCube> iceCubes;
+        public List<Cup> cups;
 
         // constructor (SPAWNER)
         public Store()
         {
+            
+            lemons = new List<Lemon>();
+            sugarCubes = new List<SugarCube>();
+            iceCubes = new List<IceCube>();
+            cups = new List<Cup>();
+        
             pricePerLemon = .5;
             pricePerSugarCube = .1;
             pricePerIceCube = .01;
