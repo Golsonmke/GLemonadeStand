@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    class Pitcher
+     public class Pitcher
     {
         public int cupsLeftInPitcher;
+
 
         public Pitcher()
         {
@@ -17,7 +18,7 @@ namespace LemonadeStand_3DayStarter
         }
         public void CupsLeftInPitchers()
         {
-            // recipe.cupsLeftInPitcher -= cupsSold
+           // recipe.cupsLeftInPitcher -= cupsSold;
         }
     }
     

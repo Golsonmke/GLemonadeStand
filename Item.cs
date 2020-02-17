@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    abstract class Item
+    public abstract class Item
     {
         // member variables (HAS A)
         public string name;
-
+        public double pricePerCup;
         // constructor (SPAWNER)
         static Item()
         {

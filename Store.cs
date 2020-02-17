@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    class Store
+    public class Store
     {
         // member variables (HAS A)
         private double pricePerLemon;

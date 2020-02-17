@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    class Inventory
+    public class Inventory
     {
         // member variables (HAS A)
         public List<Lemon> lemons;
@@ -58,6 +58,43 @@ namespace LemonadeStand_3DayStarter
                 Cup cup = new Cup();
                 cups.Add(cup);
             }
+        }
+        public void SubtractLemonsToInventory(int numberOfLemons)
+        {
+            for (int i = 0; i < numberOfLemons; i--)
+            {
+                Lemon lemon = new Lemon();
+                lemons.Add(lemon);
+            }
+        }
+
+        public void SubtractSugarCubesToInventory(int numberOfSugarCubes)
+        {
+            for (int i = 0; i < numberOfSugarCubes; i--)
+            {
+                SugarCube sugarCube = new SugarCube();
+                sugarCubes.Add(sugarCube);
+            }
+        }
+
+        public void SubtractIceCubesToInventory(int numberOfIceCubes)
+        {
+            for (int i = 0; i < numberOfIceCubes; i--)
+            {
+                IceCube iceCube = new IceCube();
+                iceCubes.Add(iceCube);
+            }
+        }
+
+        public void SubtractCupsToInventory(int numberOfCups)
+        {
+            for (int i = 0; i < numberOfCups; i--)
+            {
+                Cup cup = new Cup();
+                cups.Add(cup);
+            }
+
+
         }
     }
 }

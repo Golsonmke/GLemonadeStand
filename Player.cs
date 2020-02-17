@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    class Player
+    public class Player
     {
         // member variables (HAS A)
         public string name;
@@ -20,15 +20,15 @@ namespace LemonadeStand_3DayStarter
         public Player()
         {
             this.name = "Name";
-            inventory = new Inventory();
+          
             wallet = new Wallet();
-            recipe = new Recipe();
+            
             pitcher = new Pitcher();
             customer = new Customer();
         }
         public void PurchaseInventory()
         {
-
+           
         }
 
              // member methods (CAN DO) purschase items, sell lemonade

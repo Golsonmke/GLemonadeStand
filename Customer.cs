@@ -6,28 +6,29 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
 {
-    class Customer
+    public class Customer
     {
-        string name;
+        string names;
 
         public Customer()
         {
-            List<string> customer = new List<string>();
-            customer.Add("Peter");
-            customer.Add("Sam");
-            customer.Add("Fred");
-            customer.Add("Linda");
-            customer.Add("Gary");
-            customer.Add("Avi");
-            customer.Add("Rebecca");
-            customer.Add("Bob");
-            customer.Add("Dillon");
-            customer.Add("Rikki");
-            customer.Add("John");
-            customer.Add("Dick");
-            customer.Add("Tom");
-            customer.Add("Harry");
-            customer.Add("Bill");
+            
+            List<string> names = new List<string>();
+            names.Add("Peter");
+            names.Add("Sam");
+            names.Add("Fred");
+            names.Add("Linda");
+            names.Add("Gary");
+            names.Add("Avi");
+            names.Add("Rebecca");
+            names.Add("Bob");
+            names.Add("Dillon");
+            names.Add("Rikki");
+            names.Add("John");
+            names.Add("Dick");
+            names.Add("Tom");
+            names.Add("Harry");
+            names.Add("Bill");
 
             
 
