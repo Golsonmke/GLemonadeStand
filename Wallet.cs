@@ -28,7 +28,14 @@ namespace LemonadeStand_3DayStarter
         {
             money -= transactionAmount;
         }
-        
+        public void DisplayMoneyInWallet()
+        {
+            Console.WriteLine("Money in Wallet: " + "$" + money);
+
+                 
+        }
+
+      
     }
 
 }

@@ -14,19 +14,18 @@ namespace LemonadeStand_3DayStarter
         public Wallet wallet;
         public Recipe recipe;
         public Pitcher pitcher;
-        public Customer customer;
+        
 
         // constructor (SPAWNER)
         public Player()
         {
-            this.name = "Name";
+            name = "Name";
             wallet = new Wallet();
             inventory = new Inventory();
-            customer = new Customer();
             recipe = new Recipe();
         }
-        
+        public void SellLemonade()
 
-             // member methods (CAN DO) purschase items, sell lemonade
+       
     }  
 }

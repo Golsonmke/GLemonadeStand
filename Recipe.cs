@@ -9,20 +9,58 @@ namespace LemonadeStand_3DayStarter
     public class Recipe
     {
         // check out UML for mem vars to add
+        
         int amountOfLemons;
         int amountOfSugarCubes;
         int amountOfIceCubes;
         double pricePerCup;
+        int cupsInRecipe;
 
 
         // constructor (SPAWNER)
         public Recipe()
         {
 
+           
+            amountOfLemons = 2;
+            amountOfSugarCubes = 3;
+            amountOfIceCubes = 4;
+            pricePerCup = .25;
+            cupsInRecipe = 10;
+
+
         }
-        public UpdateRecipe
-        // member methods (CAN DO)
-        // MOVE THESE TO INV
+        public void ChangeRecipe(Player player)
+        {
+            Console.WriteLine("Adjust your recipe!");
+            Console.WriteLine("Your Recipe makes 10 cups");
+            Console.WriteLine("Choose from these options: Lemon, Sugar, Ice, Price per cup");
+            string ingriedientChoice = Console.ReadLine();
+
+            switch (ingriedientChoice)
+            {
+                case "Lemons":
+                    Console.WriteLine($"You have {player.inventory.lemons.Count} in you inventory.  How many would you like to add to your recipe?");
+                    amountOfLemons = int.Parse(Console.ReadLine());
+                    break;
+                case "Ice":
+                    Console.WriteLine($"You have {player.inventory.iceCubes.Count} in your inventory.  How many would you like to add to recipe?");
+                    amountOfIceCubes = int.Parse(Console.ReadLine());
+                    break;
+                case "Sugar":
+                    Console.WriteLine($"You have {player.inventory.sugarCubes.Count} in your inventory. How many would you like to add to recipe?");
+                    amountOfSugarCubes = int.Parse(Console.ReadLine());
+                 default:
+                    Console.WriteLine("Please enter number to add.");
+                    break;
+                   
+            }
+
+
+
+        }
+
+
        
     }
 }

@@ -9,6 +9,7 @@ namespace LemonadeStand_3DayStarter
      public class Pitcher
     {
         public int cupsLeftInPitcher;
+        
 
 
         public Pitcher()
@@ -18,7 +19,7 @@ namespace LemonadeStand_3DayStarter
         }
         public void CupsLeftInPitchers()
         {
-           // recipe.cupsLeftInPitcher -= cupsSold;
+            cupsLeftInPitcher = 0;
         }
     }
     

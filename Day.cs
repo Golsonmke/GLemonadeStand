@@ -8,28 +8,19 @@ namespace LemonadeStand_3DayStarter
 {
     public class Day
     {
+       //Has a
         public Weather weather;
         public List<Customer> customers;
 
 
         public Day()
         {
+            weather = new Weather();
+            customers = new List<Customer>();
            
         }
-      
-        public void DayOfTheWeek()
-        {
-            List<string> days= new List<string>();
-            days.Add("Monday");
-            days.Add("Tuesday");
-            days.Add("Wendesday");
-            days.Add("Thursday");
-            days.Add("Friday");
-            days.Add("Saturday");
-            days.Add("Sunday");
+        // can do?
 
-
-        }
     }
 
 }

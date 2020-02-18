@@ -12,26 +12,21 @@ namespace LemonadeStand_3DayStarter
         // where
         // how
 
-        Player player;
-        List<Day> days;
-        
-        Store store;
-        Wallet wallet;
-        Weather weather;
-        Inventory inventory;
-        
-        
-       
+       public Player player;
+       public Store store;
+        public int currentDay;
+      
+      
 
+        public double transactionAmount { get; private set; }
 
         public Game()
         {
            
             player = new Player();
             store = new Store();
-            inventory = new Inventory();
-            weather = new Weather();
            
+            
 
         }
         public void DisplayRules()
@@ -78,12 +73,12 @@ namespace LemonadeStand_3DayStarter
         public void RunGame()
         {
             DisplayRules();
-            weather.DisplayWeather();
-
+            DisplayWeather();
+            player.wallet.DisplayMoneyInWallet();
             PurchaseInventory();
-
-
-
+            player.wallet.PayMoneyForItems(transactionAmount);
+            player.wallet.DisplayMoneyInWallet();
+           
 
         }
     }

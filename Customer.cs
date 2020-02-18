@@ -8,11 +8,15 @@ namespace LemonadeStand_3DayStarter
 {
     public class Customer
     {
-        string names;
+      
+        public string names;
+        public double lemonadeValue;
+
+        
 
         public Customer()
         {
-            
+            this.lemonadeValue = lemonadeValue;
             List<string> names = new List<string>();
             names.Add("Peter");
             names.Add("Sam");
@@ -33,9 +37,10 @@ namespace LemonadeStand_3DayStarter
             
 
         }
-        public void Customers()
+        public void CustomersBuyProfile(int minimum, int maximum, Random random)
         {
-
+            int willBuy = random.Next(1, 25);
+            lemonadeValue = (willBuy / 10);
         }
     }
 
