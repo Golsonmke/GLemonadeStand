@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LemonadeStand_3DayStarter
+﻿namespace LemonadeStand_3DayStarter
 {
     public class Player
     {
@@ -23,9 +17,54 @@ namespace LemonadeStand_3DayStarter
             wallet = new Wallet();
             inventory = new Inventory();
             recipe = new Recipe();
+            pitcher = new Pitcher();
         }
-        public void SellLemonade()
+        public void MakePitcher()
+        {
+            
 
+        }
        
+        public void SubtractLemonsFromInventory(int numberOfLemons)
+        {
+            for (int i = 0; i < numberOfLemons; i--)
+            {
+                Lemon lemon = new Lemon();
+                inventory.lemons.Add(lemon);
+            }
+        }
+
+        public void SubtractSugarCubesFromInventory(int numberOfSugarCubes)
+        {
+            for (int i = 0; i < numberOfSugarCubes; i--)
+            {
+                SugarCube sugarCube = new SugarCube();
+               inventory.sugarCubes.Add(sugarCube);
+            }
+        }
+
+        public void SubtractIceCubesFromInventory(int numberOfIceCubes)
+        {
+            for (int i = 0; i < numberOfIceCubes; i--)
+            {
+                IceCube iceCube = new IceCube();
+               inventory.iceCubes.Add(iceCube);
+            }
+        }
+
+        public void SubtractCupsFromInventory(int numberOfCups)
+        {
+            for (int i = 0; i < numberOfCups; i--)
+            {
+                Cup cup = new Cup();
+               inventory.cups.Add(cup);
+            }
+
+
+        }
+
+
+
+
     }  
 }

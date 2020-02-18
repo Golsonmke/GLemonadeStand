@@ -73,12 +73,13 @@ namespace LemonadeStand_3DayStarter
         public void RunGame()
         {
             DisplayRules();
-            DisplayWeather();
+         
             player.wallet.DisplayMoneyInWallet();
             PurchaseInventory();
             player.wallet.PayMoneyForItems(transactionAmount);
             player.wallet.DisplayMoneyInWallet();
-           
+            player.recipe.ChangeRecipe(player);
+            player.MakePitcher();
 
         }
     }

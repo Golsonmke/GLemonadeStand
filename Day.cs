@@ -20,6 +20,42 @@ namespace LemonadeStand_3DayStarter
            
         }
         // can do?
+        public void StartOfDay()
+        {
+            weather.DisplayWeather();
+
+        }
+      
+        public void AddCustomerToList(int numberOfCustomers)
+        {
+            for (int i = 0; i < numberOfCustomers; i++)
+            {
+                Customer customer = new Customer();
+                customers.Add(customer);
+                DeterminNumberOfCustomers();
+            }
+        }
+        public void  DeterminNumberOfCustomers()
+        {
+            if (weather.temperature >= 90)
+            {
+                AddCustomerToList(100);
+            }
+            if (weather.temperature >= 80)
+            {
+                AddCustomerToList(90);
+            }
+            if (weather.temperature >= 70)
+            {
+                AddCustomerToList(80);
+            }
+            else if (weather.temperature <= 60)
+            {
+                AddCustomerToList(50);
+            }
+           
+            
+        }
 
     }
 

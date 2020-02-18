@@ -45,6 +45,6 @@ namespace LemonadeStand_3DayStarter
                 RandomTemperature();
                 Console.WriteLine();
         }
-
+        
     }
 }

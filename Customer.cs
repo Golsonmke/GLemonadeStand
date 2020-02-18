@@ -16,23 +16,9 @@ namespace LemonadeStand_3DayStarter
 
         public Customer()
         {
-            this.lemonadeValue = lemonadeValue;
+            
             List<string> names = new List<string>();
-            names.Add("Peter");
-            names.Add("Sam");
-            names.Add("Fred");
-            names.Add("Linda");
-            names.Add("Gary");
-            names.Add("Avi");
-            names.Add("Rebecca");
-            names.Add("Bob");
-            names.Add("Dillon");
-            names.Add("Rikki");
-            names.Add("John");
-            names.Add("Dick");
-            names.Add("Tom");
-            names.Add("Harry");
-            names.Add("Bill");
+            
 
             
 
@@ -42,6 +28,7 @@ namespace LemonadeStand_3DayStarter
             int willBuy = random.Next(1, 25);
             lemonadeValue = (willBuy / 10);
         }
+
     }
 
 }

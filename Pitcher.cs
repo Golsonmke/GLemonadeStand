@@ -9,17 +9,18 @@ namespace LemonadeStand_3DayStarter
      public class Pitcher
     {
         public int cupsLeftInPitcher;
-        
+        Recipe Recipe;
 
 
         public Pitcher()
         {
 
             
+
         }
         public void CupsLeftInPitchers()
         {
-            cupsLeftInPitcher = 0;
+            cupsLeftInPitcher = 10;
         }
     }
     
