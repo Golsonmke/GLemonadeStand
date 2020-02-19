@@ -19,11 +19,6 @@
             recipe = new Recipe();
             pitcher = new Pitcher();
         }
-        public void MakePitcher()
-        {
-            
-
-        }
        
         public void SubtractLemonsFromInventory(int numberOfLemons)
         {

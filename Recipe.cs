@@ -10,11 +10,11 @@ namespace LemonadeStand_3DayStarter
     {
         // check out UML for mem vars to add
         
-        int amountOfLemons;
-        int amountOfSugarCubes;
-        int amountOfIceCubes;
-        double pricePerCup;
-        int cupsInRecipe;
+       public int amountOfLemons;
+       public int amountOfSugarCubes;
+       public int amountOfIceCubes;
+       public double pricePerCup;
+       public int cupsInRecipe;
 
 
         // constructor (SPAWNER)
@@ -42,7 +42,7 @@ namespace LemonadeStand_3DayStarter
             switch (ingriedientChoice)
             {
                 case "No":
-                    Console.WriteLine("Choose from these options: Lemon, Sugar, Ice, Price per cup");
+                    Console.WriteLine("Choose from these options: Lemon, Sugar, Ice, Price per cup"); 
                     break;
                 case "Lemons":
                     Console.WriteLine($"You have {player.inventory.lemons.Count} in your inventory.  How many would you like to add to your recipe?");

@@ -11,7 +11,8 @@ namespace LemonadeStand_3DayStarter
        //Has a
         public Weather weather;
         public List<Customer> customers;
-
+        public Pitcher pitcher;
+        
 
         public Day()
         {
@@ -20,22 +21,29 @@ namespace LemonadeStand_3DayStarter
            
         }
         // can do?
-        public void StartOfDay()
+        public void SellLemonade(Pitcher pitcher)
         {
-            weather.DisplayWeather();
+            do
+            {
+
+            } while (true);
+            
+            
+            
 
         }
-      
+
+
         public void AddCustomerToList(int numberOfCustomers)
         {
             for (int i = 0; i < numberOfCustomers; i++)
             {
                 Customer customer = new Customer();
                 customers.Add(customer);
-                DeterminNumberOfCustomers();
+              
             }
         }
-        public void  DeterminNumberOfCustomers()
+        public void DeterminNumberOfCustomers()
         {
             if (weather.temperature >= 90)
             {
@@ -56,7 +64,7 @@ namespace LemonadeStand_3DayStarter
            
             
         }
-
+       
     }
 
 }

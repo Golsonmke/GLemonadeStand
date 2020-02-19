@@ -79,7 +79,7 @@ namespace LemonadeStand_3DayStarter
             player.wallet.PayMoneyForItems(transactionAmount);
             player.wallet.DisplayMoneyInWallet();
             player.recipe.ChangeRecipe(player);
-            player.MakePitcher();
+            
 
         }
     }
