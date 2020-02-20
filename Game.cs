@@ -12,10 +12,11 @@ namespace LemonadeStand_3DayStarter
         // where
         // how
 
-       public Player player;
-       public Store store;
+        public Player player;
+        List<Day> days;
         public int currentDay;
-      
+        Store store;
+       
       
 
         public double transactionAmount { get; private set; }
@@ -24,10 +25,10 @@ namespace LemonadeStand_3DayStarter
         {
            
             player = new Player();
-            store = new Store();
-           
+            currentDay = 0;                          // Not sure I need all these?
+            days = new List<Day>();
+             store = new Store();
             
-
         }
         public void DisplayRules()
         {
@@ -52,9 +53,8 @@ namespace LemonadeStand_3DayStarter
             
         }
         public void PurchaseInventory()
-        {
+        {    
             DisplayItems();
-          
             store.SellLemons(player);
             store.SellIceCubes(player);
             store.SellSugarCubes(player);
@@ -68,17 +68,68 @@ namespace LemonadeStand_3DayStarter
             Console.WriteLine("Ice Cubes: .01");
             Console.WriteLine("Paper Cups: .25");
         }
-
-       
-        public void RunGame()
+        public void RunDay()
         {
+
             DisplayRules();
-         
+            UserInterface.setName();
+            UserInterface.DisplayWelcome();
             player.wallet.DisplayMoneyInWallet();
             PurchaseInventory();
             player.wallet.PayMoneyForItems(transactionAmount);
             player.wallet.DisplayMoneyInWallet();
+           
+            Console.WriteLine("Your Recipe makes 10 cups");
+            Console.WriteLine("Would you like to change your recipe?");
+            Console.WriteLine("Yes or No");
+            string input = Console.ReadLine();
+            switch(input)
+            {
+                case "No":
+                case "no":
+                    break;
+                case "yes":
+                case "Yes":
+                    break;
+            }
+            Console.WriteLine("Please choose from the list of options: 'Lemons', 'Sugar Cubes','Ice' and price per cup of 'Lemonade' ");
             player.recipe.ChangeRecipe(player);
+            
+            
+
+        }
+        public void ListOfDays()
+        {
+            List<string> days = new List<string>();
+            days.Add("Monday");
+            days.Add("Tuesday");
+            days.Add("Wendesday");
+            days.Add("Thursday");
+            days.Add("Friday");
+            days.Add("Saturday");
+            days.Add("Sunday");
+
+            foreach (string day in days)
+            {
+                Console.WriteLine(day);
+            }
+        }
+        // public void SellLemonade()
+        // {
+
+        //    for (int i = 0; i < cupsLeftInPitcher.length; i++)
+        //     {
+
+        //     }  
+        //  }
+
+
+        public void RunGame()
+        {
+            RunDay();
+           
+            
+            
             
 
         }

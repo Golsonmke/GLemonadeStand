@@ -18,10 +18,11 @@ namespace LemonadeStand_3DayStarter
             
 
         }
-        public void CupsLeftInPitchers()
+        public void CupsLeftInPitchers()  ///Single Responsibility because the pitcher only hold the Lemonade.
         {
              cupsLeftInPitcher = 10;
         }
+
     }
     
 }

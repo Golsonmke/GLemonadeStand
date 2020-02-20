@@ -23,6 +23,16 @@ namespace LemonadeStand_3DayStarter
 
             return quantityOfItem;
         }
-
+        public static string name;
+        public static string Name { get { return name;  } set { name = value; } }
+        public static void setName()
+        {
+            Console.WriteLine("What would you like to call your Lemonade Stand?");
+            name = Console.ReadLine();
+        }
+        public static void DisplayWelcome()
+        {
+            Console.WriteLine($"Welcome to {name} Lemonade Stand!");
+        }
     }
 }

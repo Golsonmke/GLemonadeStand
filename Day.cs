@@ -12,25 +12,48 @@ namespace LemonadeStand_3DayStarter
         public Weather weather;
         public List<Customer> customers;
         public Pitcher pitcher;
+        public bool sellLemonade;
         
 
         public Day()
         {
             weather = new Weather();
             customers = new List<Customer>();
+            this.sellLemonade = false;
            
+            
         }
         // can do?
-        public void SellLemonade(Pitcher pitcher)
+       
+        public bool CanSellLemonade(Pitcher pitcher)
         {
+
+
+
+            sellLemonade = false;
+
             do
             {
 
-            } while (true);
-            
+
+                if (pitcher.cupsLeftInPitcher <= 1)
+                {
+                    sellLemonade = false;
+                    return false;
+                }
+
+            } while (sellLemonade == true);
+            return true;
             
             
 
+        }
+        public void GetCustomer()
+        {
+            foreach (Customer customer in customers)
+            {
+                Console.WriteLine(customers);
+            }
         }
 
 
@@ -62,6 +85,12 @@ namespace LemonadeStand_3DayStarter
                 AddCustomerToList(50);
             }
            
+            
+        }
+      
+        
+        public void EndOfDayReport()
+        {
             
         }
        

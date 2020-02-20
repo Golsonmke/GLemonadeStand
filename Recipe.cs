@@ -33,30 +33,31 @@ namespace LemonadeStand_3DayStarter
         public void ChangeRecipe(Player player)
         {
             
-            Console.WriteLine("Your Recipe makes 10 cups");
-            Console.WriteLine("Would you like to change your recipe?");
-            Console.WriteLine("Yes or No");
-           
             string ingriedientChoice = Console.ReadLine();
 
             switch (ingriedientChoice)
             {
-                case "No":
-                    Console.WriteLine("Choose from these options: Lemon, Sugar, Ice, Price per cup"); 
-                    break;
+                
+
                 case "Lemons":
+                case "lemons":
+                case "Lemon":
+                case "lemon":
                     Console.WriteLine($"You have {player.inventory.lemons.Count} in your inventory.  How many would you like to add to your recipe?");
                     amountOfLemons = int.Parse(Console.ReadLine());
                     break;
                 case "Ice":
+                case "ice":
                     Console.WriteLine($"You have {player.inventory.iceCubes.Count} in your inventory.  How many would you like to add to recipe?");
                     amountOfIceCubes = int.Parse(Console.ReadLine());
                     break;
                 case "Sugar":
+                case "sugar":
                     Console.WriteLine($"You have {player.inventory.sugarCubes.Count} in your inventory. How many would you like to add to recipe?");
                     amountOfSugarCubes = int.Parse(Console.ReadLine());
                     break;
                 case "Price per cup":
+                case "price per cup":
                     Console.WriteLine($"Your price per cup is {pricePerCup} would you like to change the price?");
                     pricePerCup = double.Parse(Console.ReadLine());
                     break;
@@ -69,7 +70,44 @@ namespace LemonadeStand_3DayStarter
 
 
         }
+        public void SubtractLemonsFromInventory(Inventory inventory)
+        {
+            for (int i = 4; i < amountOfLemons; i--)
+            {
+                Lemon lemon = new Lemon();
+                inventory.lemons.Remove(lemon);
+            }
+        }
 
+        public void SubtractSugarCubesFromInventory(Inventory inventory)
+        {
+
+            for (int i = 4; i < amountOfSugarCubes; i--)
+            {
+                SugarCube sugarCube = new SugarCube();
+                inventory.sugarCubes.Remove(sugarCube);
+            }
+        }
+
+        public void SubtractIceCubesFromInventory(Inventory inventory)
+        {
+            for (int i = 4; i < amountOfIceCubes; i--)
+            {
+                IceCube iceCube = new IceCube();
+                inventory.iceCubes.Remove(iceCube);
+            }
+        }
+
+        public void SubtractCupsFromInventory(Inventory inventory)
+        {
+            for (int i = 10; i < cupsInRecipe; i--)
+            {
+                Cup cup = new Cup();
+                inventory.cups.Remove(cup);
+            }
+
+
+        }
 
 
     }
